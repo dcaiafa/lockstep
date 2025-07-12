@@ -30,8 +30,6 @@ func expectFail(t *testing.T, f func()) {
 			t.Fatalf("Expected failure, but function succeeded")
 		} else if _, ok := err.(FailError); !ok {
 			panic(err)
-		} else {
-			// Test failure; just as expected.
 		}
 	}()
 
